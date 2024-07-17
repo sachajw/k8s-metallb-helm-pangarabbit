@@ -1,0 +1,4 @@
+{{- if .Values.metallb.configInline }}
+---
+{{ .Values.metallb.configInline | nindent 2 }}
+{{- end }}
