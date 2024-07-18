@@ -2,7 +2,7 @@ apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
   name: default-pool
-  namespace: operator
+  namespace: operators
 spec:
   addresses:
     - 192.168.0.151-192.168.0.151
@@ -11,7 +11,7 @@ apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
   name: default-pool
-  namespace: operator
+  namespace: operators
 spec:
   ipAddressPools:
     - default-pool
