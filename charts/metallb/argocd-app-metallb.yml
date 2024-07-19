@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metallb-system
+  namespace: metallb-system
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: pangarabbit
+  source:
+    repoURL: "https://github.com/metallb/metallb"
+    targetRevision: 0.0.13
+    chart: netdata
+    helm:
+      valueFiles:
+        - values-dev.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: metallb-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
