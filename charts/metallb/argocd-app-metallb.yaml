@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: "https://github.com/metallb/metallb"
     targetRevision: 0.0.13
-    chart: netdata
+    chart: metallb
     helm:
       valueFiles:
         - values-dev.yaml
