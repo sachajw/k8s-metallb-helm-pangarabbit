@@ -8,8 +8,8 @@ metadata:
 spec:
   project: pangarabbit
   source:
-    repoURL: "https://github.com/metallb/metallb"
-    targetRevision: 0.0.13
+    repoURL: "https://metallb.github.io/metallb"
+    targetRevision: 0.14.7
     chart: metallb
     helm:
       valueFiles:
